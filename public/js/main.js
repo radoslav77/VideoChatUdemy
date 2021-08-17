@@ -127,3 +127,14 @@ resumeRecordingButton.addEventListener("click", () => {
   recordingUtils.resumeRecording();
   ui.switchRecordingButtons();
 });
+
+const hangUp = document.getElementById('hang_up_button')
+hangUp.addEventListener('click', () => {
+ 
+  const msgContainer =  document.getElementById('msgContainer')
+  msgContainer.style.transform = 'translateX(400px)'
+  const videoContainer = document.getElementById('videos_container')
+  videoContainer.style.transform = 'translatY(1400px)'
+  
+  location.reload()
+})

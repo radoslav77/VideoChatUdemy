@@ -67,6 +67,10 @@ const createPeerConnection = () => {
   peerConection.onconnectionstatechange = (event) => {
     if (peerConection.connectionState === "connected") {
       console.log("succesfully connected with other peer");
+      const msgContainer =  document.getElementById('msgContainer')
+      msgContainer.style.transform = 'translateX(0)'
+      const videoContainer = document.getElementById('videos_container')
+      videoContainer.style.transform = 'translateX(0)'
     }
   };
 
@@ -130,11 +134,16 @@ export const handlePreOffer = (data) => {
   ) {
     console.log("showing call dialog");
     ui.showIncomingCallDialog(callType, acceptCallHandler, rejectCallHandler);
+    
   }
 };
 
 const acceptCallHandler = () => {
   console.log("call accepted");
+  const msgContainer =  document.getElementById('msgContainer')
+  msgContainer.style.transform = 'translateX(0)'
+  const videoContainer = document.getElementById('videos_container')
+  videoContainer.style.transform = 'translateX(0)'
   createPeerConnection();
   sendPreOfferAnswer(constants.preOfferAnswer.CALL_ACCEPTED);
   ui.showCallElements(connectedUserDetails.callType);
