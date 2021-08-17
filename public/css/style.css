@@ -25,11 +25,12 @@ html {
   height: 100%;
 }
 body {
+  background-color: #000;
   min-height: 100%;
   margin: 0;
   padding: 0;
   color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .main_container {
@@ -41,12 +42,13 @@ body {
 }
 
 .dashboard_container {
+  margin-left: 2.5%;
   width: 25%;
-  height: 100%;
-  background: linear-gradient(168.68deg, #0052c9 1.12%, #0a91db 100%);
+  height: 92%;
+  background: linear-gradient(168.68deg, #404a58 1.12%, #858788 100%);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
 }
 
@@ -64,9 +66,11 @@ body {
 }
 
 .logo_container {
-  margin-left: 40px;
   width: 180px;
   height: 120px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 .description_container {
@@ -229,6 +233,13 @@ body {
   z-index: 2;
 }
 
+i {
+  font-size: 25px;
+}
+
+.messenger_container {
+  background: #000;
+}
 .new_message_input:focus {
   outline: none;
   color: #676f7a;
@@ -237,7 +248,9 @@ body {
 .messages_container {
   flex-grow: 1;
   margin: 40px 30px;
-  overflow-y: scroll;
+
+  background: linear-gradient(168.68deg, #404a58 1.12%, #858788 100%);
+  scroll-behavior: auto;
 }
 
 .message_left_container {
@@ -292,7 +305,7 @@ body {
   height: calc(100% - 70px);
   margin: 30px 40px 40px 40px;
   border-radius: 15px;
-  background: linear-gradient(168.68deg, #0052c9 1.12%, #0a91db 100%);
+  background: linear-gradient(168.68deg, #404a58 1.12%, #858788 100%);
   /* background-image: url('../utils/images/logo.png'); */
 }
 
@@ -302,6 +315,10 @@ body {
   justify-content: center;
   width: 100%;
   height: 100%;
+}
+
+#logo {
+  width: 80%;
 }
 
 .local_video_container {
